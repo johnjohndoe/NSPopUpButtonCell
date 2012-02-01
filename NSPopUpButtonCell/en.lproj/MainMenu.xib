@@ -1333,6 +1333,7 @@
 												<string key="NSFrameSize">{438, 17}</string>
 												<reference key="NSSuperview" ref="1071405311"/>
 												<reference key="NSWindow"/>
+												<reference key="NSNextKeyView" ref="54400"/>
 												<reference key="NSTableView" ref="307007320"/>
 											</object>
 											<object class="_NSCornerView" key="NSCornerView" id="54400">
@@ -1516,6 +1517,7 @@
 									<string key="NSFrame">{{1, 304}, {438, 15}}</string>
 									<reference key="NSSuperview" ref="900544514"/>
 									<reference key="NSWindow"/>
+									<reference key="NSNextKeyView"/>
 									<string key="NSReuseIdentifierKey">_NS:1847</string>
 									<int key="NSsFlags">1</int>
 									<reference key="NSTarget" ref="900544514"/>
@@ -1541,7 +1543,7 @@
 							<string key="NSFrame">{{20, 20}, {440, 320}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView" ref="151447463"/>
+							<reference key="NSNextKeyView" ref="1071405311"/>
 							<string key="NSReuseIdentifierKey">_NS:1824</string>
 							<int key="NSsFlags">133682</int>
 							<reference key="NSVScroller" ref="1061036553"/>
@@ -1568,6 +1570,15 @@
 				<string key="NSClassName">NSFontManager</string>
 			</object>
 			<object class="NSArrayController" id="420559201">
+				<bool key="NSEditable">YES</bool>
+				<object class="_NSManagedProxy" key="_NSManagedProxy"/>
+				<bool key="NSAvoidsEmptySelection">YES</bool>
+				<bool key="NSPreservesSelection">YES</bool>
+				<bool key="NSSelectsInsertedObjects">YES</bool>
+				<bool key="NSFilterRestrictsInsertion">YES</bool>
+				<bool key="NSClearsFilterPredicateOnInsertion">YES</bool>
+			</object>
+			<object class="NSArrayController" id="60523110">
 				<bool key="NSEditable">YES</bool>
 				<object class="_NSManagedProxy" key="_NSManagedProxy"/>
 				<bool key="NSAvoidsEmptySelection">YES</bool>
@@ -2325,19 +2336,53 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">content: self.sexes</string>
+						<string key="label">content: arrangedObjects</string>
 						<reference key="source" ref="302012072"/>
-						<reference key="destination" ref="976324537"/>
-						<object class="NSNibBindingConnector" key="connector">
+						<reference key="destination" ref="60523110"/>
+						<object class="NSNibBindingConnector" key="connector" id="96264823">
 							<reference key="NSSource" ref="302012072"/>
-							<reference key="NSDestination" ref="976324537"/>
-							<string key="NSLabel">content: self.sexes</string>
+							<reference key="NSDestination" ref="60523110"/>
+							<string key="NSLabel">content: arrangedObjects</string>
 							<string key="NSBinding">content</string>
-							<string key="NSKeyPath">self.sexes</string>
+							<string key="NSKeyPath">arrangedObjects</string>
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
-					<int key="connectionID">574</int>
+					<int key="connectionID">586</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">contentValues: arrangedObjects</string>
+						<reference key="source" ref="302012072"/>
+						<reference key="destination" ref="60523110"/>
+						<object class="NSNibBindingConnector" key="connector" id="267906631">
+							<reference key="NSSource" ref="302012072"/>
+							<reference key="NSDestination" ref="60523110"/>
+							<string key="NSLabel">contentValues: arrangedObjects</string>
+							<string key="NSBinding">contentValues</string>
+							<string key="NSKeyPath">arrangedObjects</string>
+							<reference key="NSPreviousConnector" ref="96264823"/>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">591</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">selectedObject: arrangedObjects.sex</string>
+						<reference key="source" ref="302012072"/>
+						<reference key="destination" ref="420559201"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="302012072"/>
+							<reference key="NSDestination" ref="420559201"/>
+							<string key="NSLabel">selectedObject: arrangedObjects.sex</string>
+							<string key="NSBinding">selectedObject</string>
+							<string key="NSKeyPath">arrangedObjects.sex</string>
+							<reference key="NSPreviousConnector" ref="267906631"/>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">594</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -2346,6 +2391,22 @@
 						<reference key="destination" ref="976324537"/>
 					</object>
 					<int key="connectionID">575</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">contentArray: self.sexes</string>
+						<reference key="source" ref="60523110"/>
+						<reference key="destination" ref="976324537"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="60523110"/>
+							<reference key="NSDestination" ref="976324537"/>
+							<string key="NSLabel">contentArray: self.sexes</string>
+							<string key="NSBinding">contentArray</string>
+							<string key="NSKeyPath">self.sexes</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">585</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -3396,6 +3457,7 @@
 						<int key="objectID">545</int>
 						<reference key="object" ref="420559201"/>
 						<reference key="parent" ref="0"/>
+						<string key="objectName">UsersController</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">568</int>
@@ -3430,6 +3492,12 @@
 						<int key="objectID">581</int>
 						<reference key="object" ref="736811842"/>
 						<reference key="parent" ref="900544514"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">582</int>
+						<reference key="object" ref="60523110"/>
+						<reference key="parent" ref="0"/>
+						<string key="objectName">SexesController</string>
 					</object>
 				</array>
 			</object>
@@ -3589,6 +3657,7 @@
 				<string key="572.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="58.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="581.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="582.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="72.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="73.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="74.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3605,7 +3674,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">581</int>
+			<int key="maxID">594</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -3613,16 +3682,11 @@
 					<string key="className">AppDelegate</string>
 					<string key="superclassName">NSObject</string>
 					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="menu">NSMenu</string>
 						<string key="popUpButtonCell">NSPopUpButtonCell</string>
 						<string key="tableView">NSTableView</string>
 						<string key="window">NSWindow</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="menu">
-							<string key="name">menu</string>
-							<string key="candidateClassName">NSMenu</string>
-						</object>
 						<object class="IBToOneOutletInfo" key="popUpButtonCell">
 							<string key="name">popUpButtonCell</string>
 							<string key="candidateClassName">NSPopUpButtonCell</string>

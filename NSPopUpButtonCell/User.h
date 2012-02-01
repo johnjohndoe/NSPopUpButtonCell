@@ -12,9 +12,11 @@
 
   @private
 	NSString* m_name;
+	NSString* m_sex;
 }
 
 @property (assign) NSString* name;
+@property (assign) NSString* sex;
 
 - (id)initWithName:(NSString*)name;
 

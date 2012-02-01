@@ -14,6 +14,7 @@
     self = [super init];
     if (self) {
         m_name = @"";
+		m_sex = @"";
     }
     return self;
 }
@@ -27,6 +28,7 @@
 }
 
 @synthesize name = m_name;
+@synthesize sex = m_sex;
 
 - (NSString*)description {
 	return [NSString stringWithFormat:@"<%@> name = %@", self.className, m_name];
